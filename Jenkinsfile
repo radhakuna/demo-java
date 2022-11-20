@@ -7,7 +7,7 @@ pipeline{
         stage('pull the source code'){
             steps{
                 echo 'pulling the source code'
-                git branch: 'master', url: 'https://github.com/radhakuna/helloworld.git'
+                git branch: 'master', url: 'https://github.com/radhakuna/demo-java.git'
                 echo '==============================='
                 echo 'source code pulling completed'
                 echo '==============================='
