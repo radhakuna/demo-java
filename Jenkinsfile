@@ -18,6 +18,16 @@ pipeline{
                 echo 'starting the code build'
                 sh 'mvn clean install'
             }
-        }            
+        }  
+        
+        stage('copying the docker to ansible'){
+            steps{
+                echo 'copying the docker'
+                sshagent(['Ansible-Server']){
+                    sh 'scp Docker-Ansible-file.yml ansible@172.31.85.243:/home/ansible/ci-cd-files'               
+  
+                }
+            }
+        }//CI Completed
     }
 }
