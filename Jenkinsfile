@@ -28,7 +28,7 @@ pipeline{
                     sh 'scp ./target/demo.war ansible@172.31.86.169:/home/ansible/ci-cd-files'
                   
                     sh '''
-                     ssh -tt ansible-admin@172.31.0.173 << EOF
+                     ssh -tt ansible-admin@172.31.86.169 << EOF
                         ansible-playbook  ci-cd-files/docker-playbood.yml
                      exit
                      EOF
