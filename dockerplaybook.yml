@@ -7,7 +7,7 @@
       shell: pwd
       
     - name: copy the docker file
-      copy: src=Dockerfile dest="./app-files"
+      copy: src=Dockerfile.yml dest="./app-files"
       
     - name: change the executable permission of the docker file
       shell: chmod +x ./app-files/Dockerfile
