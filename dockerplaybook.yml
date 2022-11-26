@@ -16,7 +16,7 @@
       copy: src=demo.war dest="./app-files"
       
     - name: docker image building
-      shell: echo admin | sudo -S docker build -f ./app-files/Dockerfile.yml --tag demo-app ./app-files
+      shell: echo admin | sudo -S docker build -f ./app-files/Dockerfile.yml --tag radhakuna/radha:demo-app ./app-files
       
     - name: push the image to the container registry
       shell: echo admin | sudo -S docker push radhakuna/radha/demo-app
