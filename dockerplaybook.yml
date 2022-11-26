@@ -13,7 +13,7 @@
       shell: chmod +x ./app-files/Dockerfile.yml
       
     - name: copy war file
-      copy: src=Demo.war dest="./app-files"
+      copy: src=demo.war dest="./app-files"
       
     - name: docker image building
       shell: echo admin | sudo -S docker build -f ./app-files/Dockerfile.yml --tag demo-app ./app-files
