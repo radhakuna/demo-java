@@ -10,10 +10,10 @@
       copy: src=Dockerfile.yml dest="./app-files"
       
     - name: change the executable permission of the docker file
-      shell: chmod +x ./app-files/Dockerfile
+      shell: chmod +x ./app-files/Dockerfile.yml
       
     - name: docker image building
-      shell: echo admin | sudo -S docker build ./app-files/Dockerfile --tag demo-app ./app-files
+      shell: echo admin | sudo -S docker build ./app-files/Dockerfile.yml --tag demo-app ./app-files
       
     - name: push the image to the container registry
       shell: echo admin | sudo -S docker push radhakuna/radha/demo-app
