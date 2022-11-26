@@ -24,8 +24,8 @@ pipeline{
             steps{
                 echo 'copying the docker'
                 sshagent(['Ansible-Server']){
-                    sh 'scp Docker-Ansible-file.yml ansible@172.31.85.243:/home/ansible/ci-cd-files'               
-                    sh 'scp ./target/demo.war ansible@172.31.85.243:/home/ansible/ci-cd-files'
+                    sh 'scp Docker-Ansible-file.yml ansible@172.31.86.169:/home/ansible/ci-cd-files'               
+                    sh 'scp ./target/demo.war ansible@172.31.86.169:/home/ansible/ci-cd-files'
                 }
             }
         }//CI Completed
