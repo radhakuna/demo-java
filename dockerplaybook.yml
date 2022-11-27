@@ -18,5 +18,5 @@
     - name: docker image building
       shell: echo admin | sudo -S docker build -f ./app-files/Dockerfile.yml --tag radhakuna/demo-app ./app-files
       
-    - name: push the image to the container registry
-      shell: echo admin | sudo -S docker push radhakuna/demo-app
+   # - name: push the image to the container registry
+    #  shell: echo admin | sudo -S docker push radhakuna/demo-app
